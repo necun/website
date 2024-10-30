@@ -8,7 +8,7 @@
 body {
   overflow-x: hidden;
   position: relative; }
-
+ 
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -16,7 +16,7 @@ body {
   color: #6a6a6a;
   font-size: 14px;
   background-color: #eff2f1; }
-
+ 
 a {
   text-decoration: none;
   -webkit-transition: .3s all ease;
@@ -29,7 +29,7 @@ a {
     text-decoration: none; }
   a.more {
     font-weight: 600; }
-
+ 
 .custom-navbar {
   background: #3b5d50 !important;
   padding-top: 20px;
@@ -94,7 +94,7 @@ a {
       margin-right: 0px; }
       .custom-navbar .custom-navbar-cta li:first-child {
         margin-right: 20px; }
-
+ 
 .hero {
   background: #3b5d50;
   padding: calc(4rem - 30px) 0 0rem 0; }
@@ -157,7 +157,7 @@ a {
       @media (min-width: 1200px) {
         .hero .hero-img-wrap:after {
           top: -40px; } }
-
+ 
 .btn {
   font-weight: 600;
   padding: 12px 30px;
@@ -193,10 +193,10 @@ a {
     .btn.btn-white-outline:hover {
       border-color: white;
       color: #ffffff; }
-
+ 
 .section-title {
   color: #2f2f2f; }
-
+ 
 .product-section {
   padding: 7rem 0; }
   .product-section .product-item {
@@ -268,7 +268,7 @@ a {
       visibility: visible; }
     .product-section .product-item:hover:before {
       height: 70%; }
-
+ 
 .why-choose-section {
   padding: 7rem 0; }
   .why-choose-section .img-wrap {
@@ -287,7 +287,7 @@ a {
       z-index: -1; }
     .why-choose-section .img-wrap img {
       border-radius: 20px; }
-
+ 
 .feature {
   margin-bottom: 30px; }
   .feature .icon {
@@ -310,7 +310,7 @@ a {
     font-size: 14px;
     line-height: 22px;
     color: #6a6a6a; }
-
+ 
 .we-help-section {
   padding: 7rem 0; }
   .we-help-section .imgs-grid {
@@ -359,7 +359,7 @@ a {
         -ms-grid-row-span: 27;
         grid-row: 6 / span 27;
         padding-top: 20px; }
-
+ 
 .custom-list {
   width: 100%; }
   .custom-list li {
@@ -378,7 +378,7 @@ a {
       position: absolute;
       left: 0;
       top: 8px; }
-    .popular-product {
+     .popular-product {
         padding: 0 0 7rem 0;
         overflow: hidden; /* Hide scrollbars */
         position: relative;
@@ -387,7 +387,7 @@ a {
       .popular-product .row {
         display: inline-flex; /* Align items horizontally */
         gap: 15px;
-        animation: slide 20s linear infinite; /* Continuous sliding */
+        animation: slide 9s linear infinite; /* Continuous sliding */
         width: max-content; /* Ensures the row is only as wide as its content */
       }
       
@@ -447,10 +447,10 @@ a {
         transform: translate(-50%, -50%);
         z-index: -1;
       }
-      
+       
 .testimonial-section {
   padding: 3rem 0 7rem 0; }
-
+ 
 .testimonial-slider-wrap {
   position: relative; }
   .testimonial-slider-wrap .tns-inner {
@@ -534,10 +534,10 @@ a {
         background-color: #d6d6d6; }
       .testimonial-slider-wrap .tns-nav button:hover:before, .testimonial-slider-wrap .tns-nav button.tns-nav-active:before {
         background-color: #3b5d50; }
-
+ 
 .before-footer-section {
   padding: 7rem 0 12rem 0 !important; }
-
+ 
 .blog-section {
   padding: 7rem 0 12rem 0; }
   .blog-section .post-entry a {
@@ -564,7 +564,7 @@ a {
         font-weight: 600; }
   .blog-section .post-entry:hover .post-thumbnail img, .blog-section .post-entry:focus .post-thumbnail img {
     opacity: .7; }
-
+ 
 .footer-section {
   padding: 80px 0;
   background: #ffffff; }
@@ -650,10 +650,10 @@ a {
     border-color: #dce5e4; }
     .footer-section .border-top.copyright {
       font-size: 14px !important; }
-
+ 
 .untree_co-section {
   padding: 7rem 0; }
-
+ 
 .form-control {
   height: 50px;
   border-radius: 10px;
@@ -673,7 +673,7 @@ a {
     font-size: 14px; }
   .form-control:-moz-placeholder {
     font-size: 14px; }
-
+ 
 .service {
   line-height: 1.5; }
   .service .service-icon {
@@ -687,10 +687,10 @@ a {
     background: #3b5d50;
     margin-right: 20px;
     color: #ffffff; }
-
+ 
 textarea {
   height: auto !important; }
-
+ 
 .site-blocks-table {
   overflow: auto; }
   .site-blocks-table .product-thumbnail {
@@ -716,20 +716,20 @@ textarea {
     color: #000000;
     border: none;
     height: auto !important; }
-
+ 
 .site-block-order-table th {
   border-top: none !important;
   border-bottom-width: 1px !important; }
-
+ 
 .site-block-order-table td, .site-block-order-table th {
   color: #000000; }
-
+ 
 .couponcode-wrap input {
   border-radius: 10px !important; }
-
+ 
 .text-primary {
   color: #3b5d50 !important; }
-
+ 
 .thankyou-icon {
   position: relative;
   color: #3b5d50; }
