@@ -364,11 +364,11 @@ a {
   width: 100%; }
   .custom-list li {
     display: inline-block;
-    width: calc(50% - 20px);
+    width: calc(50% - 50px);
     margin-bottom: 12px;
     line-height: 1.5;
     position: relative;
-    padding-left: 20px; }
+    padding-left: 25px; }
     .custom-list li:before {
       content: "";
       width: 8px;
@@ -377,46 +377,58 @@ a {
       border: 2px solid #3b5d50;
       position: absolute;
       left: 0;
-      top: 8px; }
-     .popular-product {
-        padding: 0 0 7rem 0;
+      top: 20px; }
+
+      
+.popular-product {
+        padding: 0 0 5rem 100px;
         overflow: hidden; /* Hide scrollbars */
         position: relative;
       }
       
       .popular-product .row {
-        display: inline-flex; /* Align items horizontally */
+        display: flex; /* Align items horizontally */
         gap: 15px;
-        animation: slide 9s linear infinite; /* Continuous sliding */
-        width: max-content; /* Ensures the row is only as wide as its content */
+        animation: slide 20s linear infinite; /* Continuous sliding */
+        width: max-content; /* Ensure the row is only as wide as its content */
+        overflow: hidden; /* Hide overflow to prevent items from showing outside the row */
       }
       
       .product-item-sm {
         flex: 0 0 auto; /* Prevent stretching */
-        width: 800px; /* Fixed card size */
+        width: 500px; /* Fixed card size */
       }
       
-      /* Sliding Animation */
-      @keyframes slide {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-100%);
-        }
-      }
+      /* Modify the keyframes */
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Start at the first item */
+  }
+  50% {
+    transform: translateX(-50%); /* Move to the midpoint (halfway through) */
+  }
+  100% {
+    transform: translateX(-100%); /* Slide to the end */
+  }
+}
+
       
+      /* Pause animation on hover */
+.popular-product .row:hover {
+  animation-play-state: paused;
+}
+
       /* Product Item Styles */
       .popular-product .product-item-sm h3 {
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 400;
         color: #2f2f2f;
       }
       
       .popular-product .product-item-sm a {
         text-decoration: none;
         color: #2f2f2f;
-        transition: 0.3s all ease;
+        transition: 0.1s all ease;
       }
       
       .popular-product .product-item-sm a:hover {
@@ -447,7 +459,8 @@ a {
         transform: translate(-50%, -50%);
         z-index: -1;
       }
-       
+      
+      
 .testimonial-section {
   padding: 3rem 0 7rem 0; }
  
