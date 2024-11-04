@@ -895,8 +895,9 @@ textarea {
 
   .table {
     width: 70%;
-    margin-top: 10px;
-    border-collapse: collapse;
+    margin-top: 0px;
+    border-collapse:collapse;
+    margin-left: 220px ;
 }
 
 .table th,
