@@ -927,16 +927,16 @@ textarea {
         transform: translateX(-50%);
     }
   .table {
-    width: 70%;
+    width: 90%;
     margin-top: 0px;
     border-collapse:collapse;
-    margin-left: 220px ;
+    margin-left: 145px ;
 }
 
 .table th,
 .table td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 2px solid #ddd;
+    padding: 6px;
     text-align: center;
 }
 
