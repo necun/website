@@ -32,13 +32,24 @@ a {
  
 .custom-navbar {
   background: #ffffff !important;
-  padding-top: 20px;
-  padding-bottom: 20px; }
+  padding-top: 5px;
+  padding-bottom: 10px; }
   .custom-navbar .navbar-brand {
     font-size: 32px;
-    font-weight: 600; }
+    font-weight: 600;
+    color:#000000;
+    display: flex;
+    align-items: center; 
+    margin-left: -80px;}
+    
     .custom-navbar .navbar-brand > span {
       opacity: .4; }
+
+  .custom-navbar .navbar-logo {
+    height: 70px; /* Set logo size */
+    max-height: 100%; /* Ensure it doesn’t exceed navbar height */
+    width: auto; /* Maintain aspect ratio */
+  }
   .custom-navbar .navbar-toggler {
     border-color: transparent; }
     .custom-navbar .navbar-toggler:active, .custom-navbar .navbar-toggler:focus {
