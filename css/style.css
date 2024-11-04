@@ -749,7 +749,7 @@ a {
     border-color: #dce5e4; }
     .footer-section .border-top.copyright {
       font-size: 14px !important; }
- 
+
 .untree_co-section {
   padding: 7rem 0; }
  
@@ -914,4 +914,14 @@ textarea {
 
 .table tr:nth-child(even) {
     background-color: #f9f9f9;
+}
+
+
+.links-wrap {
+  display: flex;
+  justify-content: flex-end; /* Aligns the entire `links-wrap` row to the right */
+}
+
+.links-wrap .col-6 {
+  text-align: right; /* Aligns text within each column to the right */
 }
