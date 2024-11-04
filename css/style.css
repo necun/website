@@ -127,7 +127,7 @@ a {
       
       /* Background Image for Hero Section */
   .hero .background-wrap {
-          background-image: url('/images/campaign_poster.png'); /* Replace with path to the poster image */
+          /* background-image: url('/images/campaign_poster.png'); Replace with path to the poster image */
           background-size: cover;
           background-position: center;
           position: absolute;
