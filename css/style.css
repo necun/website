@@ -949,3 +949,66 @@ textarea {
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Smaller shadow on mobile */
   }
 }
+
+
+.footer-section .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; /* Prevent items from stacking */
+}
+
+.footer-logo-wrap,
+.col-lg-4.text-center,
+.links-wrap
+ {
+  flex: 1;
+  text-align: center;
+  /* margin-top: -50px; */
+}
+
+.col-lg-4.text-center {
+  /* font-size: 1000px; */
+  margin-top: -120px;
+}
+
+.footer-logo-wrap {
+  text-align: left; /* Align text to the left for logo and contact details */
+}
+
+.links-wrap {
+  text-align: left; 
+  margin-right: 20px;
+  padding-right: 20px;
+}
+
+.links-wrap ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-right: 20px;
+}
+
+.links-wrap ul li {
+  margin-bottom: 10px; /* Adjust space between links */
+}
+
+.custom-social li {
+  display: inline-block;
+  margin: 0 5px; /* Adjust spacing for social icons */
+}
+
+.col-lg-4.text-center img {
+  margin: 5px; /* Add margin between app download images */
+}
+
+@media (max-width: 768px) {
+  .footer-section .row {
+      flex-wrap: wrap;
+      text-align: center; /* Allow wrapping on small screens */
+  }
+  .footer-logo-wrap, .col-lg-4.text-center, .links-wrap {
+      /* text-align: center; */
+      margin-bottom: 20px;
+  }
+}
