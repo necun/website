@@ -895,7 +895,6 @@ textarea {
     width: 35px
   }
 
-<<<<<<< HEAD
 
 
 
@@ -927,7 +926,6 @@ textarea {
     100% {
         transform: translateX(-50%);
     }
-=======
   .table {
     width: 70%;
     margin-top: 0px;
@@ -949,5 +947,4 @@ textarea {
 
 .table tr:nth-child(even) {
     background-color: #f9f9f9;
->>>>>>> af59ca0c996848517dce3e2137a385ec7747d97e
 }
