@@ -930,8 +930,9 @@ textarea {
   .table {
     width: 90%;
     margin-top: 0px;
-    border-collapse:collapse;
-    margin-left: 145px ;
+    border-collapse: collapse;
+    margin-left: 145px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadow */
 }
 
 .table th,
