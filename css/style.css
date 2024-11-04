@@ -907,17 +907,20 @@ textarea {
     }
   }
  /* Style the table with shadow and responsive padding */
+/* Style the table with shadow and responsive padding */
 .custom-table {
   width: 100%; /* Full width for responsiveness */
   border-collapse: collapse;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadow */
-  margin: 0 auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Adding a soft shadow */
+  margin: 20px auto; /* Center table and add margin */
   overflow-x: auto; /* Allows table to scroll horizontally on smaller screens */
+  background-color: #fff; /* Optional: adds a background for better contrast */
+  border-radius: 8px; /* Optional: slightly rounded corners */
 }
 
 .custom-table th,
 .custom-table td {
-  border: 2px solid #ddd;
+  border: 1px solid #ddd;
   padding: 12px;
   text-align: center;
 }
@@ -943,6 +946,6 @@ textarea {
       padding: 10px; /* Reduce padding for mobile */
   }
   .custom-table {
-      box-shadow: none; /* Optional: remove shadow on smaller screens */
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Smaller shadow on mobile */
   }
 }
