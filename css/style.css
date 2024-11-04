@@ -926,6 +926,8 @@ textarea {
     100% {
         transform: translateX(-50%);
     }
+  }
+.table {
   .table {
     width: 90%;
     margin-top: 0px;
