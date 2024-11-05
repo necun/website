@@ -105,12 +105,17 @@ a {
       margin-right: 0px; }
       .custom-navbar .custom-navbar-cta li:first-child {
         margin-right: 20px; }
+
  
 .hero {
           background: #3b5d50;
           padding: calc(4rem - 30px) 0 0rem 0;
           position: relative;
           overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
       }
       
       @media (min-width: 768px) {
@@ -124,37 +129,100 @@ a {
               padding: calc(8rem - 30px) 0 8rem 0;
           }
       }
+  
+  .hero-standard {
+    background-color: #3b5d50;
+    display: flex;
+    padding: calc(4rem - 30px) 0 4rem 0;
+    align-items: center; 
+    min-height: 400px;
+  }
+
+  .hero-standard .intro-excerpt {
+    color: #ffffff;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-standard .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 20%; /* Push content to the left */
+    max-width: none;
+  }
+
+
+
+  .hero-standard h1 {
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+  }
+  
+  .hero-standard p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+  }
+
+
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .hero-text {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  @media (min-width: 992px) {
+    .hero-title {
+      font-size: 3rem;
+    }
+  }
+
+
+      
       
       /* Background Image for Hero Section */
   .hero .background-wrap {
-          /* background-image: url('/images/campaign_poster.png'); Replace with path to the poster image */
+          /* background-image: url('/images/campaign_poster.png');  */
           background-size: cover;
           background-position: center;
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
-          height: 100%;
-          z-index: 1; /* Ensure it's behind the content */
-          opacity: 0.9; /* Optional: Adds slight transparency for overlay effect */
-      }
+          height: 100%; 
+          z-index: 1; 
+           opacity: 0.9; 
+       } 
       
       .hero .intro-excerpt {
           /* position: relative;
           z-index: 4; */
-          margin-bottom: 20px; /* Example of other styling */
+          margin-bottom: 20px; 
           color: #ffffff;
           max-width: 450px;
           /* padding: 20px; */
           /* font-size: 1.1rem; */
-          max-height: 1000px;
-          min-height: 400px;       /* Set minimum height to prevent shrinking */
-          display: flex;           /* Flex helps keep height stable */
-          align-items: center;     /* Center text vertically */
-          justify-content: center; /* Center text horizontally */
-          box-sizing: border-box;  /* Ensure padding is included in total height */}
+           max-height: 1000px; 
+          min-height: 400px;       
+          display: flex;           
+          align-items: center;     
+          justify-content: center; 
+          box-sizing: border-box;  } 
       
-      @media (min-width: 992px) {
+       @media (min-width: 992px) {
           .hero .intro-excerpt {
               max-width: 450px;
           }
@@ -162,8 +230,8 @@ a {
       
       .hero .container {
           position:static;
-          z-index: 2; /* Ensure content is above the background image */
-      }
+          z-index: 2;  
+       }  
       
       .hero h1 {
           font-weight: 700;
@@ -221,7 +289,7 @@ a {
           }
       }
       
-      /* Decorative Dots */
+      
       .hero .hero-img-wrap:after {
           content: "";
           position: absolute;
@@ -237,9 +305,11 @@ a {
       @media (min-width: 1200px) {
           .hero .hero-img-wrap:after {
               top: -40px;
-          }
-      }
+          } 
+      } 
       
+
+
 
 
 

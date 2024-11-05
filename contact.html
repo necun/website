@@ -61,13 +61,13 @@
 		<!-- End Header/Navigation -->
 
 		<!-- Start Hero Section -->
-			<div class="hero">
+			<!-- <div class="hero">
 				<div class="container">
 					<div class="row justify-content-between">
 						<div class="col-lg-5">
 							<div class="intro-excerpt">
-								<h1>Contact</h1>
-								<p class="mb-4">Want to make a bulk purchase or customize your order? Contact us for personalized assistance and to explore our flexible order types designed to fit your requirements! </p>
+								<h1 class="hero-title">Contact</h1>
+								<p class="hero-text">Want to make a bulk purchase or customize your order? Contact us for personalized assistance and to explore our flexible order types designed to fit your requirements! </p>
 								<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
 							</div>
 						</div>
@@ -78,7 +78,30 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
+
+
+
+
+			<div class="hero hero-standard">
+				<div class="container">
+				  <div class="row justify-content-center">
+					<div class="col-lg-8 text-center">
+					  <div class="intro-excerpt">
+						<h1 class="hero-title">Contact Us</h1>
+						<p class="hero-text">Want to make a bulk purchase or customize your order? Contact us for personalized assistance and to explore our flexible order types designed to fit your requirements!</p>
+						<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
+					  </div>
+					</div>
+
+					<div class="col-lg-7">
+						<div class="hero-img-wrap">
+							<img src="images/PP 1.png" class="img-fluid">
+						</div>
+					</div>
+				  </div>
+				</div>
+			  </div>
 		<!-- End Hero Section -->
 
 		
@@ -136,7 +159,7 @@
                 </div>
               </div>
 
-              <form>
+              <form onsubmit="submitForm(event)">
                 <div class="row">
                   <div class="col-6">
                     <div class="form-group">
@@ -163,6 +186,41 @@
 
                 <button type="submit" class="btn btn-primary-hover-outline">Send Message</button>
               </form>
+
+			  <script>
+				function submitForm(event) {
+				  event.preventDefault(); // Prevent default form submission
+			  
+				  // Collect form data
+				  const fname = document.getElementById('fname').value;
+				  const lname = document.getElementById('lname').value;
+				  const email = document.getElementById('email').value;
+				  const message = document.getElementById('message').value;
+			  
+				  // Prepare API endpoint with query parameters
+				  const apiUrl = `http://127.0.0.1:8000/campaign/enquiry_form?Email=${encodeURIComponent(email)}&Name=${encodeURIComponent(fname + ' ' + lname)}&Phone_number=8179848830&Company_name=renote.ai&Quantity=1000&Delivery_pincode=500081&Comments=${encodeURIComponent(message)}`;
+			  
+				  // Send POST request
+				  fetch(apiUrl, {
+					method: 'POST',
+					headers: {
+					  'Accept': 'application/json',
+					  'Content-Type': 'application/json'
+					},
+				  })
+				  .then(response => response.json())
+				  .then(data => {
+					// Handle success response
+					console.log('Form submitted successfully:', data);
+					alert('Thank you! Your message has been sent.');
+				  })
+				  .catch(error => {
+					// Handle error
+					console.error('Error submitting form:', error);
+					alert('There was an error sending your message. Please try again later.');
+				  });
+				}
+			  </script>
 
             </div>
 
@@ -219,8 +277,8 @@
 							ReNote AI Pvt Ltd,<br>
 							T-Hub Phase 2.0, Madhapur,<br>
 							Hyderabad, Telangana, India - 500081.<br>
-							+91 9999999999<br>
-							+91 9999999999
+							+91 9666363363<br>
+							+91 8886663326
 						</p>
 						<ul class="list-unstyled custom-social">
 							<li><a href="https://www.facebook.com/people/ReNote-AI/61568234070306/" target="_blank"><span class="fa fa-brands fa-facebook-f"></span></a></li>
