@@ -279,19 +279,59 @@ a {
 
       
       
-      /* Background Image for Hero Section */
+.hero .background-wrap {
+  /* background-image: url('/images/campaign_poster.png'); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
   .hero .background-wrap {
-          /* background-image: url('/images/campaign_poster.png');  */
-          background-size: cover;
-          background-position: center;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%; 
-          z-index: 1; 
-          opacity: 0.9; 
-       } 
+      background-position: top;
+      height: 80vh;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero .background-wrap {
+      background-position: center top;
+      height: 75vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .background-wrap {
+      background-position: left top;
+      height: 60vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero .background-wrap {
+      background-position: right top;
+      height: 50vh;
+  }
+}
+
+/* Target Pixel 7 screen dimensions (approx. 412px width) */
+@media (max-width: 412px) {
+  .hero .background-wrap {
+      background-image: none; /* Remove the background image */
+      background-color: transparent; /* Optional: set a fallback color */
+  }
+}
+
+
+    
       
       .hero .intro-excerpt {
           /* position: relative;
