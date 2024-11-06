@@ -130,51 +130,111 @@ a {
           }
       }
   
-  .hero-standard {
-    background-color: #3b5d50;
-    display: flex;
-    padding: calc(4rem - 30px) 0 4rem 0;
-    align-items: center; 
-    justify-content: space-between;
-    min-height: 400px;
+      .hero-standard {
+        background-color: #3b5d50;
+        display: flex;
+        padding: calc(4rem - 30px) 0 4rem 0;
+        align-items: center; 
+        justify-content: space-between;
+        min-height: 400px;
+    }
+    
+    .hero-standard .intro-excerpt {
+        color: #ffffff;
+        max-width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 20px;
+    }
+    
+    .hero-standard .container {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 5%;
+        /* padding-right: 50%; Push content to the left */
+        max-width: 90%;
+    }
+    
+    .hero-standard h1 {
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+        text-align: left;
+    }
+    
+    .hero-standard p.hero-text {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        margin-top: 10px;
+        line-height: 1.6; /* Increase line-height for readability */
+        text-align: left;
+        max-width: 100%;
+    }
+    
+    .hero-standard .hero-img-wrap {
+      position: relative;
+      max-width: 50%; /* Keep width to ensure the image stays the same size */
+      z-index: 3;
   }
-
-  .hero-standard .intro-excerpt {
-    color: #ffffff;
-    max-width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-right: 20px;
-  }
-
-  .hero-standard .container {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 5%; /* Push content to the left */
-    max-width: 90%;
-  }
-
-
   
-  .hero-standard h1 {
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    text-align: left;
+  .hero-standard .hero-img-wrap img {
+      position: relative;
+      width: 100%;
+      max-width: 300px; /* Keep the same size */
+      top: 500px; /* Move the image slightly down */
+      left: 200px; /* Move image to the right */
+      z-index: 2; /* Ensure it sits above the dotted background */
+      height: auto;
   }
   
-  .hero-standard p.hero-text {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.1rem;
-    margin-top: 10px;
-    line-height: 1.6; /* Increase line-height for readability */
-    text-align: left;
-    max-width: 100%;
+  /* Decorative Dots Background */
+  .hero-standard .hero-img-wrap:after {
+      content: "";
+      position: absolute;
+      width: 255px;
+      height: 217px;
+      background-image: url("../images/dots-light.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      left: 100px; /* Move dotted background to the right */
+      top: 100px; /* Adjust to place it under the main image */
+      z-index: 1; /* Place it behind the main image */
   }
+  
+  @media (min-width: 768px) {
+      .hero-standard .hero-img-wrap img {
+          top: 400px;
+      }
+      .hero-standard .hero-img-wrap:after {
+          left: 300px; /* Adjust right position for medium screens */
+          top: 200px; /* Align under the image for medium screens */
+      }
+  }
+  
+  @media (min-width: 992px) {
+      .hero-standard .hero-img-wrap img {
+          top: 500px;
+      }
+      .hero-standard .hero-img-wrap:after {
+          left: 200px; /* Adjust right position for large screens */
+          top: 350px; /* Align under the image for large screens */
+      }
+  }
+  
+  @media (min-width: 1200px) {
+      .hero-standard .hero-img-wrap img {
+          top: 60px;
+      }
+      .hero-standard .hero-img-wrap:after {
+          left: 320px; /* Adjust right position for extra-large screens */
+          top: 40px; /* Align under the image for extra-large screens */
+      }
+  }
+  
 
 
   .hero-title {
@@ -198,13 +258,15 @@ a {
     }
   }
 
-  .hero-standard h1.hero-title{
+  .hero-standard h1{
     /* text-align: left; */
-    margin-left: -100px;
+    margin-left:0px;
     font-size: 2.5rem;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 20px;
+    /* margin-bottom: 200px; */
+    margin-top: 100px;
+
   }
 
 
@@ -233,11 +295,12 @@ a {
       .hero .intro-excerpt {
           /* position: relative;
           z-index: 4; */
-          margin-bottom: 20px; 
+          margin-bottom: 20px;
+          /* margin-top: 10px;  */
           color: #ffffff;
           max-width: 450px;
-          /* padding: 20px; */
-          /* font-size: 1.1rem; */
+          padding: 200px;
+          font-size: 1.1rem;
            max-height: 1000px; 
           min-height: 400px;       
           display: flex;           
