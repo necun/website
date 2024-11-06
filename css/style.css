@@ -489,6 +489,7 @@ a {
       transition: .3s all ease; }
       .product-section .product-item .icon-cross img {
         position: absolute;
+        
         left: 50%;
         top: 50%;
         -webkit-transform: translate(-50%, -50%);
@@ -503,7 +504,7 @@ a {
       background: #dce5e4;
       height: 0%;
       z-index: -1;
-      border-radius: 10px;
+      
       -webkit-transition: .3s all ease;
       -o-transition: .3s all ease;
       transition: .3s all ease; }
@@ -692,6 +693,7 @@ a {
         margin-right: 10px;
         flex: 0 0 120px;
         position: relative;
+        
       }
       
       .popular-product .product-item-sm .thumbnail:before {
@@ -1054,6 +1056,7 @@ textarea {
 .product-item-sm {
     display: inline-flex;
     margin-right: 20px;
+    
     /* Adjust spacing as needed */
 }
 
