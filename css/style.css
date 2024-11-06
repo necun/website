@@ -153,7 +153,7 @@ a {
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
-        padding-left: 5%;
+        padding-left: 2%;
         /* padding-right: 50%; Push content to the left */
         max-width: 90%;
     }
@@ -227,10 +227,11 @@ a {
   
   @media (min-width: 1200px) {
       .hero-standard .hero-img-wrap img {
-          top: 60px;
+        left: 370px;
+          top: 55px;
       }
       .hero-standard .hero-img-wrap:after {
-          left: 320px; /* Adjust right position for extra-large screens */
+          left: 500px; /* Adjust right position for extra-large screens */
           top: 40px; /* Align under the image for extra-large screens */
       }
   }
