@@ -246,8 +246,11 @@
 
 				function checkFormValidity() {
 					const fullName = document.getElementById("full_name").value.trim();
+					console.log("fullName",fullName)
 					const email = document.getElementById("email").value.trim();
+					console.log("email",email)
 					const contactNumber = document.getElementById("contact_number").value.trim();
+					console.log("contactNumber",contactNumber)
 					const submitButton = document.getElementById("submit_button");
 			
 					submitButton.disabled = !(fullName && email && contactNumber);
@@ -255,37 +258,80 @@
 
 
 
-				function submitForm(event) {
+				async function submitForm(event) {
 				  event.preventDefault(); // Prevent default form submission
 			  
 				  // Collect form data
-				  const fname = document.getElementById('fname').value;
-				  const lname = document.getElementById('lname').value;
-				  const email = document.getElementById('email').value;
-				  const message = document.getElementById('message').value;
-			  
-				  // Prepare API endpoint with query parameters
-				  const apiUrl = `http://127.0.0.1:8000/campaign/enquiry_form?Email=${encodeURIComponent(email)}&Name=${encodeURIComponent(fname + ' ' + lname)}&Phone_number=8179848830&Company_name=renote.ai&Quantity=1000&Delivery_pincode=500081&Comments=${encodeURIComponent(message)}`;
-			  
-				  // Send POST request
-				  fetch(apiUrl, {
-					method: 'POST',
-					headers: {
-					  'Accept': 'application/json',
-					  'Content-Type': 'application/json'
-					},
-				  })
-				  .then(response => response.json())
-				  .then(data => {
-					// Handle success response
-					console.log('Form submitted successfully:', data);
-					alert('Thank you! Your message has been sent.');
-				  })
-				  .catch(error => {
-					// Handle error
-					console.error('Error submitting form:', error);
-					alert('There was an error sending your message. Please try again later.');
-				  });
+				  const formData = new FormData();
+    
+					// Collect values from the form
+					const name = document.getElementById("full_name").value.trim();
+					const email = document.getElementById("email").value.trim();
+					const phoneNumber = String(document.getElementById("contact_number").value.trim());
+					const companyName = document.getElementById("company_name").value.trim();
+					const location = document.getElementById("location").value.trim();
+					const quantity = document.getElementById("quantity").value.trim();
+					const logoPrinting = document.getElementById("logo_printing").value.trim();
+					const comments = document.getElementById("comments").value.trim();
+
+					// Build the query string
+					const queryParams = new URLSearchParams();
+					queryParams.append("Name", name);
+					queryParams.append("Email", email);
+					queryParams.append("Phone_number", phoneNumber);
+
+					// Append optional fields only if they are not empty
+					if (companyName) {
+						queryParams.append("Company_name", companyName);
+					}
+					if (location) {
+						queryParams.append("location", location);
+					}
+					if (quantity) {
+						queryParams.append("Quantity", quantity);
+					}
+					if (logoPrinting) {
+						queryParams.append("logo_printing", logoPrinting);
+					}
+					if (comments) {
+						queryParams.append("Comments", comments);
+					}
+
+					// Prepare the full URL with query parameters
+					const apiUrl = `http://127.0.0.1:8000/campaign/enquiry_form?${queryParams.toString()}`;
+					console.log("apiurl",apiUrl)
+					console.log("Submitting form with data:", {
+						Name: name,
+						Email: email,
+						Phone_number: phoneNumber,
+						Company_name: companyName,
+						location: location,
+						Quantity: quantity,
+						logo_printing: logoPrinting,
+						Comments: comments
+					});
+					try {
+						const response = await fetch(apiUrl, {
+							method: "POST",
+							headers: {
+								"accept": "application/json"
+							},
+							logo_file: formData
+						});
+
+						console.log("request completed")
+
+						if (response.ok) {
+							const result = await response.json();
+							console.log("Form submitted successfully:", result);
+							alert("Thank you! Your inquiry has been sent.");
+						} else {
+							throw new Error("Failed to submit the form");
+						}
+					} catch (error) {
+						console.error("Error submitting form:", error);
+						alert("There was an error sending your inquiry. Please try again later.");
+					}
 				}
 			  </script>
 
@@ -359,10 +405,10 @@
 					<div class="col-lg-4 text-center">
 						<h5>Download Our App</h5>
 						<a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" target="_blank">
-							<img src="images/playstore_logo.png" alt="Get it on Google Play" style="width: 100px; margin: 5px;">
+							<img src="images/playstore_logo.png" alt="Get it on Google Play" style="width: 200px; margin: 9px;">
 						</a>
 						<a href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank">
-							<img src="images/appstore_logo.png" alt="Download on the App Store" style="width: 100px; margin: 5px;">
+							<img src="images/appstore_logo.png" alt="Download on the App Store" style="width: 200px; margin: 9px;">
 						</a>
 					</div>
 				
