@@ -49,6 +49,7 @@ a {
     height: 70px; /* Set logo size */
     max-height: 100%; /* Ensure it doesn’t exceed navbar height */
     width: auto; /* Maintain aspect ratio */
+    margin-left: 23.7%;
   }
   .custom-navbar .navbar-toggler {
     border-color: transparent; }
@@ -116,18 +117,94 @@ a {
           align-items: center;
           justify-content: center;
           text-align: center;
+          /* height: 75vh; */
       }
+
+      @media (max-width: 412px) {
+        /* Styles for small mobile screens */
+        .hero {
+          /* padding: calc(4rem - 30px) 0 4rem 0; */
+          
+          height: 25vh;
+      }
+      }
+
+
+      @media (max-width: 576px) {
+        /* Styles for small mobile screens */
+        .hero {
+          /* padding: calc(4rem - 30px) 0 4rem 0; */
+          
+          height: 25vh;
+      }
+      }
+      
+      /* Small devices (phones, landscape) */
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        /* Styles for landscape phones */
+        .hero {
+          /* padding: calc(4rem - 30px) 0 4rem 0; */
+          
+          height: 75vh;
+      }
+      }
+
+
       
       @media (min-width: 768px) {
           .hero {
-              padding: calc(4rem - 30px) 0 4rem 0;
+              /* padding: calc(4rem - 30px) 0 4rem 0; */
+              padding: 4rem 0;
+              text-align: left;
+              height: 75vh;
+          }
+
+          .hero h1 {
+            font-size: 2.5rem;
+          }
+        
+          .hero .hero-img-wrap img {
+            max-width: 400px;
           }
       }
       
       @media (min-width: 992px) {
           .hero {
-              padding: calc(8rem - 30px) 0 8rem 0;
+              /* padding: calc(8rem - 30px) 0 8rem 0; */
+              padding: 5rem 0;
+              height: 75vh;
           }
+
+          .hero h1 {
+            font-size: 3rem;
+          }
+        
+          .hero .hero-img-wrap img {
+            max-width: 450px;
+          }
+        
+          .hero .intro-excerpt {
+            max-width: 60%;
+          }
+      }
+
+
+      @media (min-width: 1200px) {
+
+        .hero {
+          /* padding: calc(8rem - 30px) 0 8rem 0; */
+          padding: 5rem 0;
+          height: 75vh;
+      }
+
+
+        .hero h1 {
+          font-size: 3.5rem;
+        }
+      
+        .hero .hero-img-wrap img {
+          max-width: 500px;
+        }
       }
   
       .hero-standard {
@@ -185,7 +262,7 @@ a {
       position: relative;
       width: 100%;
       max-width: 300px; /* Keep the same size */
-      top: 500px; /* Move the image slightly down */
+      /* top: 500px; Move the image slightly down */
       left: 200px; /* Move image to the right */
       z-index: 2; /* Ensure it sits above the dotted background */
       height: auto;
@@ -223,6 +300,8 @@ a {
           left: 200px; /* Adjust right position for large screens */
           top: 350px; /* Align under the image for large screens */
       }
+
+      
   }
   
   @media (min-width: 1200px) {
@@ -290,44 +369,57 @@ a {
   width: 100%;
   height: 100%;
   z-index: 1;
-  opacity: 0.9;
+  opacity: 1.5;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 1200px) {
   .hero .background-wrap {
       background-position: top;
-      height: 80vh;
+      /* height: 75vh; */
   }
 }
 
 @media (max-width: 992px) {
   .hero .background-wrap {
       background-position: center top;
-      height: 75vh;
+      /* height: 75vh; */
+  }
+
+  .hero .background-wrap {
+    background-image: url('/images/campaign_poster_medium.png');
   }
 }
 
 @media (max-width: 768px) {
   .hero .background-wrap {
-      background-position: left top;
-      height: 60vh;
+      background-position: center top;
+      /* height: 60vh; */
   }
 }
 
 @media (max-width: 576px) {
   .hero .background-wrap {
       background-position: right top;
-      height: 50vh;
+      /* height: 50vh; */
+      background-color: #3b5d50;
+
+  }
+
+  .hero .background-wrap {
+    background-image: url('/images/campaign_poster_small.png');
   }
 }
 
 /* Target Pixel 7 screen dimensions (approx. 412px width) */
 @media (max-width: 412px) {
   .hero .background-wrap {
+      background-image: url('/images/campaign_poster_small.png');
       background-image: none; /* Remove the background image */
-      background-color: transparent; /* Optional: set a fallback color */
+      background-color: #ffffff; /* Optional: set a fallback color */
+      /* height: 25vh; */
   }
+  
 }
 
 
@@ -955,7 +1047,8 @@ a {
       font-size: 14px !important; }
 
 .untree_co-section {
-  padding: 7rem 0; }
+  padding: 7rem 0;
+  bottom: 1000px; }
  
 .form-control {
   height: 50px;
