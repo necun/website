@@ -21,7 +21,7 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 		<link href="css/tiny-slider.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
-		<title>Contact</title>
+		<title> ReNote AI-Contact Us</title>
 	</head>
 
 	<body>
@@ -163,23 +163,23 @@
 								<div class="row">
 									<div class="col-12">
 										<div class="form-group">
-											<label class="text-black" for="full_name">*Full Name</label>
+											<label class="text-black" for="full_name">Full Name*</label>
 											<input type="text" class="form-control" id="full_name" oninput="checkFormValidity()" required>
 										</div>
 									</div>
 									<div class="col-12">
 										<div class="form-group">
-											<label class="text-black" for="email">*Email ID</label>
+											<label class="text-black" for="email">Email ID*</label>
 											<input type="email" class="form-control" id="email" oninput="checkFormValidity()" required>
 										</div>
 									</div>
 									<div class="col-12">
 										<div class="form-group">
-											<label class="text-black" for="contact_number">*Contact Number</label>
+											<label class="text-black" for="contact_number">Contact Number*</label>
 											<input type="tel" class="form-control" id="contact_number" oninput="checkFormValidity()" required>
 										</div>
 									</div>
-									<div class="col-12">
+									<!-- <div class="col-12">
 										<div class="form-group">
 											<label class="text-black" for="company_name">Company Name</label>
 											<input type="text" class="form-control" id="company_name">
@@ -219,15 +219,15 @@
 											<label class="text-black" for="logo_file">Upload Logo File</label>
 											<input type="file" class="form-control" id="logo_file">
 										</div>
-									</div>
-									<div class="col-12">
+									</div> -->
+									 <div class="col-12">
 										<div class="form-group">
 											<label class="text-black" for="comments">Other Comments</label>
-											<textarea class="form-control" id="comments" rows="4"></textarea>
+											<textarea class="form-control" id="comments" ></textarea>
 										</div>
 									</div>
 								</div>
-						<button type="submit" class="btn btn-primary-hover-outline" id="submit_button" disabled>Send Inquiry</button>
+						<button type="submit" class="btn btn-primary-hover-outline" id="submit_button" disabled>Send Enquiry</button>
 							</form>
 						</div>
 					<div>
@@ -237,11 +237,6 @@
 		
 
 			  <script>
-				function toggleLogoFile() {
-					const logoPrinting = document.getElementById("logo_printing").value;
-					const logoFileContainer = document.getElementById("logo_file_container");
-					logoFileContainer.style.display = logoPrinting === "yes" ? "block" : "none";
-				}
 
 
 				function checkFormValidity() {
@@ -268,10 +263,6 @@
 					const name = document.getElementById("full_name").value.trim();
 					const email = document.getElementById("email").value.trim();
 					const phoneNumber = String(document.getElementById("contact_number").value.trim());
-					const companyName = document.getElementById("company_name").value.trim();
-					const location = document.getElementById("location").value.trim();
-					const quantity = document.getElementById("quantity").value.trim();
-					const logoPrinting = document.getElementById("logo_printing").value.trim();
 					const comments = document.getElementById("comments").value.trim();
 
 					// Build the query string
@@ -281,18 +272,7 @@
 					queryParams.append("Phone_number", phoneNumber);
 
 					// Append optional fields only if they are not empty
-					if (companyName) {
-						queryParams.append("Company_name", companyName);
-					}
-					if (location) {
-						queryParams.append("location", location);
-					}
-					if (quantity) {
-						queryParams.append("Quantity", quantity);
-					}
-					if (logoPrinting) {
-						queryParams.append("logo_printing", logoPrinting);
-					}
+					
 					if (comments) {
 						queryParams.append("Comments", comments);
 					}
@@ -304,10 +284,6 @@
 						Name: name,
 						Email: email,
 						Phone_number: phoneNumber,
-						Company_name: companyName,
-						location: location,
-						Quantity: quantity,
-						logo_printing: logoPrinting,
 						Comments: comments
 					});
 					try {
@@ -316,7 +292,6 @@
 							headers: {
 								"accept": "application/json"
 							},
-							logo_file: formData
 						});
 
 						console.log("request completed")
@@ -392,8 +367,9 @@
 							ReNote AI Pvt Ltd,<br>
 							T-Hub Phase 2.0, Madhapur,<br>
 							Hyderabad, Telangana, India - 500081.<br>
-							+91 9666363363<br>
-							+91 8886663326
+							+91 9666363363,+91 8886663326<br>
+							sales@renote.ai
+							
 						</p>
 						<ul class="list-unstyled custom-social">
 							<li><a href="https://www.facebook.com/people/ReNote-AI/61568234070306/" target="_blank"><span class="fa fa-brands fa-facebook-f"></span></a></li>
@@ -436,8 +412,8 @@
 
 						<div class="col-lg-6 text-center text-lg-end">
 							<ul class="list-unstyled d-inline-flex ms-auto">
-								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
-								<li><a href="#">Privacy Policy</a></li>
+								<li class="me-4"><a href="#" style="font-size:15px">Terms &amp; Conditions</a></li>
+								<li><a href="#" style="font-size:15px">Privacy Policy</a></li>
 							</ul>
 						</div>
 
@@ -452,6 +428,18 @@
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/tiny-slider.js"></script>
 		<script src="js/custom.js"></script>
+
+<!-- WhatsApp Floating Icon -->
+<a href="https://wa.me/+918886663326" target="_blank" class="whatsapp-float">
+    <img src="images\whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
+</a>
+
+<a href="contact.html#contact-form" target="" class="booknow-float">
+    <img src="images\booking.png" alt="BookNow" class="booknow-icon">
+</a>
+
+
+
 	</body>
 
 </html>
