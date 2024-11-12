@@ -211,7 +211,7 @@ a {
       .hero-standard {
         background-color: #3b5d50;
         display: flex;
-        padding: calc(4rem - 30px) 0 4rem 0;
+        padding: calc(4rem - 30px) 0 0rem 0;
         align-items: center; 
         justify-content: space-between;
         min-height: 400px;
@@ -261,7 +261,7 @@ a {
   
   .hero-standard .hero-img-wrap img {
       position: relative;
-      width: 100%;
+      width: 95%;
       max-width: 300px; /* Keep the same size */
       /* top: 500px; Move the image slightly down */
       left: 200px; /* Move image to the right */
@@ -308,7 +308,7 @@ a {
   @media (min-width: 1200px) {
       .hero-standard .hero-img-wrap img {
         left: 370px;
-          top: 55px;
+        top: 85px;
       }
       .hero-standard .hero-img-wrap:after {
           left: 500px; /* Adjust right position for extra-large screens */
