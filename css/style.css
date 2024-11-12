@@ -557,6 +557,15 @@ a {
     .btn.btn-primary:hover {
       background: #314d43;
       border-color: #314d43; }
+
+
+    
+
+
+
+
+
+
   .btn.btn-secondary {
     color: #2f2f2f;
     background: #f9bf29;
@@ -622,12 +631,160 @@ a {
         }
     }
   .btn.btn-white-outline {
-    background: transparent;
+    background: #068a32 !important;
     border-width: 2px;
     border-color: rgba(255, 255, 255, 0.3); }
     .btn.btn-white-outline:hover {
       border-color: white;
       color: #ffffff; }
+
+
+      .btn.btn-contact {
+        background: #068a32 !important; /* Custom background color */
+        color: #ffffff !important;
+        right: 4% !important;
+        bottom: 8.25% !important;
+        padding: 10px 24px !important;
+        font-size: 16px !important;
+        border-color: #ffffff !important;
+        border-radius: 20px !important;
+        font-weight: 600;
+        position: relative;
+        z-index: 1;
+        transform: translate(0, 0);
+      }
+      
+      .btn.btn-contact:hover {
+        background: #4A865D !important; /* Darker shade on hover */
+        border-color: #4A865D !important;
+        color: #ffffff !important;
+      }
+      
+      /* Responsive adjustments for .btn-contact */
+      @media (max-width: 768px) {
+        .btn.btn-contact {
+          padding: 8px 18px !important;
+          font-size: 14px !important;
+          right: 5%; /* Adjust positioning for mobile */
+            bottom: 15%;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .btn.btn-contact {
+          padding: 6px 15px !important;
+          font-size: 12px !important;
+          right: 3%;
+            bottom: 20%;
+        }
+      }
+
+
+      @media (max-width: 1200px) {
+        .btn.btn-contact {
+            right: 12%;
+            bottom: 10%;
+            padding: 8px 18px;
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 576px) {
+      .btn.btn-contact {
+          right: 4%;
+          bottom: 18%;
+          padding: 5px 12px;
+          font-size: 10px;
+      }
+  }
+    
+    /* Tablets and Smaller Desktops (e.g., 992px and below) */
+    @media (max-width: 992px) {
+      .btn.btn-contact {
+            right: 15%;
+            bottom: 9%;
+            padding: 1px 5px;
+            font-size: 6px;
+        }
+    }
+
+      
+
+      .btn.btn-secondary {
+        color: #2f2f2f;
+        background: #f9bf29;
+        z-index: 1;
+        /* position: absolute; */
+        right: 19%;
+        bottom: 8.25%;
+        padding: 8px 20px; 
+        font-size: 14px; /* Smaller font size */
+        border-color: #ffffff;
+        border-width: 3px;
+        border-radius: 25px; /* Optional: add rounded corners */
+        font-weight: 600;
+        transform: translate(0, 0); }
+        .btn.btn-secondary:hover {
+          background: #f8b810;
+          border-color: #f8b810; }
+    
+    
+          @media (max-width: 768px) {
+            .btn.btn-secondary {
+                padding: 6px 15px; /* Smaller padding for smaller screens */
+                font-size: 12px; /* Smaller font size for mobile */
+                right: 5%; /* Adjust positioning for mobile */
+                bottom: 15%; /* Adjust to prevent overlapping */
+            }
+          }
+        
+          @media (max-width: 480px) {
+            .btn.btn-secondary {
+                padding: 5px 12px;
+                font-size: 10px;
+                right: 3%;
+                bottom: 20%;
+            }
+          }
+    
+          @media (max-width: 1200px) {
+            .btn.btn-secondary {
+                right: 12%;
+                bottom: 10%;
+                padding: 8px 18px;
+                font-size: 13px;
+            }
+        }
+    
+        @media (max-width: 576px) {
+          .btn.btn-secondary {
+              right: 4%;
+              bottom: 18%;
+              padding: 5px 12px;
+              font-size: 10px;
+          }
+      }
+        
+        /* Tablets and Smaller Desktops (e.g., 992px and below) */
+        @media (max-width: 992px) {
+            .btn.btn-secondary {
+                right: 15%;
+                bottom: 9%;
+                padding: 1px 5px;
+                font-size: 6px;
+            }
+        }
+
+
+        
+      .btn.btn-white-outline {
+        background: transparent;
+        border-width: 2px;
+        border-color: rgba(255, 255, 255, 0.3); }
+        .btn.btn-white-outline:hover {
+          border-color: white;
+          color: #ffffff; }
+
  
 .section-title {
   color: #2f2f2f;
@@ -902,7 +1059,7 @@ a {
       
       
 .testimonial-section {
-  padding: 3rem 0 7rem 0; }
+  padding: 4rem 0 0rem 0; }
  
 .testimonial-slider-wrap {
   position: relative; }
@@ -992,7 +1149,7 @@ a {
   padding: 7rem 0 12rem 0 !important; }
  
 .blog-section {
-  padding: 7rem 0 12rem 0; }
+  padding: 0rem 0 12rem 0; }
   .blog-section .post-entry a {
     text-decoration: none; }
   .blog-section .post-entry .post-thumbnail {
