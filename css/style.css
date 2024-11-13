@@ -715,10 +715,10 @@ a {
         background: #f9bf29;
         z-index: 1;
         /* position: absolute; */
-        right: 19%;
+        right: 15%;
         bottom: 8.25%;
         padding: 8px 20px; 
-        font-size: 14px; /* Smaller font size */
+        font-size: 26px; /* Smaller font size */
         border-color: #ffffff;
         border-width: 3px;
         border-radius: 25px; /* Optional: add rounded corners */
@@ -1231,7 +1231,7 @@ padding-bottom: 15px; }
     z-index: 1;
     right: 0; }
     .footer-section .sofa-img img {
-      max-width: 380px;
+      max-width: 367px;
       height: 153% }
   .footer-section .links-wrap {
     margin-top: 0px; }
@@ -1534,8 +1534,9 @@ textarea {
   padding: 0;
   margin: 0;
   padding-right: 20px;
-  text-align: center;
+  text-align: left;
   margin-top: -11%;
+  margin-left: 35%;
 }
 
 .links-wrap ul li {
